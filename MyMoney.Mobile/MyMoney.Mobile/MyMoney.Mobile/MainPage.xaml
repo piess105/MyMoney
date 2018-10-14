@@ -2,13 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyMoney.Mobile"
+             xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:views="clr-namespace:MyMoney.Mobile.Views"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="MyMoney.Mobile.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Label BackgroundColor="Red"  VerticalOptions="Start" HeightRequest="10"/>
+        
+        <controls:FlowListView x:Name="flowListView" FlowColumnCount="1"
+                                   HasUnevenRows="True">            
+            <controls:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+						XAlign="Center" YAlign="Center" TextColor="White" Font="SemiBold,21" Text="+ 3 653,00 zl" LineBreakMode="CharacterWrap" BackgroundColor="Red"/>
+
+                        <views:OperationsView Grid.Row="1"/>                      
+                    </Grid>
+                </DataTemplate>
+            </controls:FlowListView.FlowColumnTemplate>
+        </controls:FlowListView>
+        
+        
+        
+    </Grid>
 
 </ContentPage>

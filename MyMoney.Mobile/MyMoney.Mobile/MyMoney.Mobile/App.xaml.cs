@@ -1,3 +1,4 @@
+using DLToolkit.Forms.Controls;
 using MyMoney.Mobile.Views;
 using System;
 using Xamarin.Forms;
@@ -12,6 +13,11 @@ namespace MyMoney.Mobile
 		{
 			InitializeComponent();
 
+            FlowListView.Init();
+        }
+
+		protected override void OnStart ()
+		{
             var masterDetailPage = new MasterDetailPage
             {
                 Master = new LeftMenuView { Title = "Menu" },
@@ -20,11 +26,6 @@ namespace MyMoney.Mobile
 
             MainPage = masterDetailPage;
         }
-
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
 
 		protected override void OnSleep ()
 		{

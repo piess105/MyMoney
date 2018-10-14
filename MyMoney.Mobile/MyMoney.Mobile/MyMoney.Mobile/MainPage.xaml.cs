@@ -12,6 +12,9 @@ namespace MyMoney.Mobile
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+
+            flowListView.FlowItemsSource = new List<string> { "DSD"};
+
+        }
 	}
 }
