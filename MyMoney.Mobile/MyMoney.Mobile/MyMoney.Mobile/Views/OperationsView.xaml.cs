@@ -16,7 +16,8 @@ namespace MyMoney.Mobile.Views
         {
             InitializeComponent();
 
-            flowListView.FlowItemsSource = new List<string> { "dsadas", "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" , "dsadas" };
+            flowListView.FlowItemsSource = new List<string> { "dsadas", "dsadas", "dsadas", "dsadas", };
+
 
         }
     }

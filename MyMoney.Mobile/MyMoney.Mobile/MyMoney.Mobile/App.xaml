@@ -2,7 +2,10 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyMoney.Mobile.App">
-	<Application.Resources>
-    
-	</Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationBarColor">#119688</Color>
+            <Color x:Key="SystemBarColor">#11796b</Color>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

@@ -7,8 +7,10 @@
              xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="MyMoney.Mobile.MainPage">
 
+
+
     <Grid>
-        <Label BackgroundColor="Red"  VerticalOptions="Start" HeightRequest="10"/>
+        <Label BackgroundColor="{StaticResource NavigationBarColor}"  VerticalOptions="Start" HeightRequest="10"/>
         
         <controls:FlowListView x:Name="flowListView" FlowColumnCount="1"
                                    HasUnevenRows="True">            
@@ -21,7 +23,7 @@
                         </Grid.RowDefinitions>
                         
                         <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
-						XAlign="Center" YAlign="Center" TextColor="White" Font="SemiBold,21" Text="+ 3 653,00 zl" LineBreakMode="CharacterWrap" BackgroundColor="Red"/>
+						XAlign="Center" YAlign="Center" TextColor="White" Font="SemiBold,21" Text="+ 3 653,00 zl" LineBreakMode="CharacterWrap" BackgroundColor="{StaticResource NavigationBarColor}"/>
 
                         <views:OperationsView Grid.Row="1"/>                      
                     </Grid>

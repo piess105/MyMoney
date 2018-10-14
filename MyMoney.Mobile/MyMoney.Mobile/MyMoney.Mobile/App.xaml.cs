@@ -16,15 +16,19 @@ namespace MyMoney.Mobile
             FlowListView.Init();
         }
 
-		protected override void OnStart ()
-		{
+        protected override void OnStart()
+        {
+            var navigationPage = new NavigationPage(new MainPage { Title = "Main Page" });
+            navigationPage.BarBackgroundColor = (Color)this.Resources["NavigationBarColor"];
+
             var masterDetailPage = new MasterDetailPage
             {
                 Master = new LeftMenuView { Title = "Menu" },
-                Detail = new NavigationPage(new MainPage { Title = "Main Page" })
+                Detail = navigationPage
             };
 
             MainPage = masterDetailPage;
+            
         }
 
 		protected override void OnSleep ()
